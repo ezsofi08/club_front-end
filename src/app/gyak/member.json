@@ -1,0 +1,20 @@
+[
+    {
+      "nev":"Zsofi",
+      "id":1,
+      "club_id":1
+      
+    },
+
+    {
+        "nev":"Niki",
+        "id":2,
+        "club_id":2
+    },
+
+    {
+      "nev":"Fanni",
+      "id":3,
+      "club_id":2
+  }
+] 

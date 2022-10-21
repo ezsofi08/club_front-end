@@ -1,0 +1,19 @@
+[
+    {
+      "nev":"smink",
+      "id":1,
+      "member_id":1
+    },
+
+    {
+        "nev":"pizza",
+        "id":2,
+        "member_id":1
+    },
+
+    {
+        "nev":"alma",
+        "id":3,
+        "member_id":3
+    }
+] 
