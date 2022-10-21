@@ -1,11 +1,17 @@
 [
     {
-      "nev":"könyv",
+      "nev":"Könyv Klub",
       "id":1
     },
 
     {
-        "nev":"foci",
+        "nev":"Foci Klub",
         "id":2
+    },
+
+
+    {
+        "nev":"Sakk Klub",
+        "id":3
     }
 ] 

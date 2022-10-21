@@ -12,8 +12,26 @@
     },
 
     {
-        "nev":"alma",
+        "nev":"telefon",
         "id":3,
         "member_id":3
+    },
+
+    {
+        "nev":"pénz",
+        "id":3,
+        "member_id":4
+    },
+
+    {
+        "nev":"laptop",
+        "id":3,
+        "member_id":2
+    },
+
+    {
+        "nev":"cipő",
+        "id":3,
+        "member_id":4
     }
 ] 

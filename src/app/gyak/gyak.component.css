@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(232, 229, 224);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+.box{
+    position: relative;
+    display: flex;
+    width: 90vw;
+    height: 90vh;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: rgb(245, 245, 245);
+     align-items: center;
+     justify-content: center;
+
+
+}
+
+
+.club{
+
+    background-color: rgb(244,233,230);
+    height:20vh;
+    width: 20vw;
+    text-align: center;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.club_name{
+    text-decoration: underline;
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+.mo{
+    display: inline-block;
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+.object{
+    display: inline-block;
+}
