@@ -1,0 +1,20 @@
+[
+    {
+      "club_name":"Könyv Klub",
+      "club_id":1,
+      "club_num_members":2
+    },
+
+    {
+        "club_name":"Foci Klub",
+        "club_id":2,
+        "club_num_members":2
+    },
+
+
+    {
+        "club_name":"Sakk Klub",
+        "club_id":3,
+        "club_num_members":2
+    }
+] 

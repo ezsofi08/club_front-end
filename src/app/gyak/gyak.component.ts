@@ -1,41 +1,20 @@
 import { Conditional } from '@angular/compiler';
 import { Component, getNgModuleById, OnInit } from '@angular/core';
-import members from "./member.json"
-import objects from "./object.json"
-import clubs from "./club.json"
+import members from"../gyak/json/member.json"
+import gadgets from "../gyak/json/gadget.json"
+import clubs from "../gyak/json/club.json"
+// @ts-ignore
+import {Gadget} from "igadget.ts"
+// @ts-ignore
+import {Member} from "imember.ts"
+// @ts-ignore
+import {Club} from "iclub.ts"
 
+// @ts-ignore
+import {Club0} from "iclub0.ts"
+// @ts-ignore
+import {Member0} from "imember0.ts"
 
-interface Object{
-  nev:string,
-  id:number,
-  member_id:number
-}
-
-
-interface Member{
-   nev:string,
-   id:number,
-   club_id:number,
-   objects:Object[]
-}
-
-
-interface Member0{
-  nev:string,
-  id:number,
-  club_id:number
-}
-
-interface Club{
-  nev:string,
-  id:number,
-  members:Member[]
-}
-
-interface Club0{
-  nev:string,
-  id:number,
-}
 
 
 
@@ -57,7 +36,7 @@ club:Club[]=[]
 
 
 member0:Member0[]=members;
-object:Object[]=objects;
+gadget:Gadget[]=gadgets;
 club0:Club0[]=clubs;
 
   
@@ -65,38 +44,40 @@ club0:Club0[]=clubs;
   constructor() { 
 
 
-    for (let x=0;x<this.member0.length;x++){
+    for (let a=0;a<this.member0.length;a++){
       let member1:Member={
-        nev:this.member0[x].nev,
-        id:this.member0[x].id,
-        club_id:this.member0[x].club_id,
-        objects:[]
+        member_name:this.member0[a].member_name,
+        member_id:this.member0[a].member_id,
+        club_id:this.member0[a].club_id,
+        member_gender:this.member0[a].member_gender,
+        gadgets:[]
       }
       this.member.push(member1)
     }
 
-    for(let a=0;a<this.club0.length;a++){
+    for(let b=0;b<this.club0.length;b++){
       let club1:Club={
-        nev:this.club0[a].nev,
-        id:this.club0[a].id,
+        club_name:this.club0[b].club_name,
+        club_id:this.club0[b].club_id,
+        club_num_members:this.club0[b].club_num_members,
         members:[]
       }
       this.club.push(club1)
     }
 
-    for (let y=0;y<this.member.length;y++){
+    for (let c=0;c<this.member.length;c++){
 
-      for(let z=0; z<this.object.length;z++){
-       if(this.member[y].id==this.object[z].member_id){
-        this.member[y].objects.push(this.object[z])
+      for(let d=0; d<this.gadget.length;d++){
+       if(this.member[c].member_id==this.gadget[d].member_id){
+        this.member[c].gadgets.push(this.gadget[d])
        }
     }
   }
 
-    for (let b=0;b<this.club.length;b++){
-      for (let c=0;c<this.member.length;c++){
-        if(this.club[b].id==this.member[c].club_id){
-          this.club[b].members.push(this.member[c])
+    for (let e=0;e<this.club.length;e++){
+      for (let f=0;f<this.member.length;f++){
+        if(this.club[e].club_id==this.member[f].club_id){
+          this.club[e].members.push(this.member[f])
         }
       }
     }

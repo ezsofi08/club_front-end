@@ -1,0 +1,39 @@
+[
+    {
+      "member_name":"Zsófi",
+      "member_id":1,
+      "member_gender":true,
+      "club_id":1
+      
+    },
+
+    {
+        "member_name":"Patrik",
+        "member_id":2,
+        "member_gender":false,
+        "club_id":2
+    },
+
+    {
+      "member_name":"Tomi",
+      "member_id":3,
+      "member_gender":false,
+      "club_id":2
+  },
+
+  {
+    "member_name":"Bence",
+    "member_id":4,
+    "member_gender":false,
+    "club_id":3
+  },
+
+  {
+    "member_name":"Marci",
+    "member_id":5,
+    "member_gender":false,
+    "club_id":1
+  }
+
+
+] 

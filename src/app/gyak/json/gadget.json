@@ -1,0 +1,37 @@
+[
+    {
+      "gadget_name":"smink",
+      "gadget_id":1,
+      "member_id":1
+    },
+
+    {
+        "gadget_name":"pizza",
+        "gadget_id":2,
+        "member_id":1
+    },
+
+    {
+        "gadget_name":"telefon",
+        "gadget_id":3,
+        "member_id":3
+    },
+
+    {
+        "gadget_name":"pénz",
+        "gadget_id":3,
+        "member_id":4
+    },
+
+    {
+        "gadget_name":"laptop",
+        "gadget_id":3,
+        "member_id":2
+    },
+
+    {
+        "gadget_name":"cipő",
+        "gadget_id":3,
+        "member_id":4
+    }
+] 

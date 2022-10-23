@@ -10,11 +10,11 @@
 <body>
     <div class="box">
         <div class="club" *ngFor="let x of club">
-            <div class="club_name">{{x.nev}}</div>
+            <div class="club_name">{{x.club_name}}</div>
             <div class="member" *ngFor="let y of x.members">
-                <div class="mo">{{y.nev}}:</div>
-                <div  class="object" *ngFor="let z of y.objects">
-                    <div class="mo">{{z.nev}}</div>
+                <div class="mo">{{y.member_name}}:</div>
+                <div  class="object" *ngFor="let z of y.gadgets">
+                    <div class="mo">{{z.gadget_name}}</div>
                 </div>
             </div>
         </div>
