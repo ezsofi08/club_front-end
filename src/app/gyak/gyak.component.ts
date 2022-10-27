@@ -27,6 +27,7 @@ export class GyakComponent implements OnInit {
     var res = this.getClubs().subscribe();
     
     console.log("res from gyak")
+    console.log(res)
   }
 
   member: Member[] = []
