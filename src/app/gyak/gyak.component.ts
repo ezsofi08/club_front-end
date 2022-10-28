@@ -74,6 +74,7 @@ export class GyakComponent implements OnInit {
     console.log(tempclub.name)
     }
     
+<<<<<<< HEAD
     this.club.push(tempclub)}
     )
 
@@ -91,6 +92,10 @@ export class GyakComponent implements OnInit {
 
   /*ngOnInit(): void {
    
+=======
+    console.log("res from gyak")
+    console.log(res)
+>>>>>>> e6d61ecaffdfc34f564e964f5c2e262828b016b1
   }
 
   member: Member[] = []
