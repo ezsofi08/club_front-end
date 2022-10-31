@@ -14,7 +14,7 @@ import { klub } from "iclub0.ts"
 // @ts-ignore
 import { Member0 } from "imember0.ts"
 import { HttpClient } from "@angular/common/http";
-import { JsonPipe } from '@angular/common';
+
 
 
 
@@ -45,14 +45,7 @@ export class GyakComponent implements OnInit {
 
 
 
- /* public klub2:klub={
-    id:1,
-    name:"",
-    numOfMembers:1,
-    members:[]
 
- 
-  }*/
  
 
   constructor(private http: HttpClient){
@@ -74,7 +67,7 @@ export class GyakComponent implements OnInit {
     console.log(tempclub.name)
     }
     
-<<<<<<< HEAD
+
     this.club.push(tempclub)}
     )
 
@@ -92,10 +85,6 @@ export class GyakComponent implements OnInit {
 
   /*ngOnInit(): void {
    
-=======
-    console.log("res from gyak")
-    console.log(res)
->>>>>>> e6d61ecaffdfc34f564e964f5c2e262828b016b1
   }
 
   member: Member[] = []
