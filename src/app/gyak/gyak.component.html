@@ -9,19 +9,18 @@
 </head>
 <body>
     <div class="box">
-        <!--<div class="club" *ngFor="let x of club">
-            <div class="club_name">{{x.club_name}}</div>
-            <div class="member" *ngFor="let y of x.members">
-                <div class="mo">{{y.member_name}}:</div>
-                <div  class="object" *ngFor="let z of y.gadgets">
-                    <div class="mo">{{z.gadget_name}}</div>
-                </div>
+        <div class="club" *ngFor="let i of club">
+            <div class="club_name">{{i.name}}</div> 
+            <div class="member" *ngFor="let j of i.members">
+                <div class="mo">{{j.name}} :</div>
+                <div class="gadget" *ngFor="let k of gadget">
+                    <div *ngIf="k.member.id==j.id">
+                        <div class="mo">{{k.name}}</div>
+                    </div>
+               </div>
             </div>
-        </div>-->
-        <div *ngFor="let i of club">
-            {{i.name}}
         </div>
-    </div>          
+    </div>        
 </body>
 </html>
 

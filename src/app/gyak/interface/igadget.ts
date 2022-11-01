@@ -1,5 +1,8 @@
+// @ts-ignore
+import {Member} from "imember.ts"
+
 export interface Gadget{
-    gadget_name:string,
-    gadget_id:number,
-    member_id:number
+    id:number,
+    name:string,
+    member:Member
 }

@@ -1,11 +1,11 @@
+
 // @ts-ignore
-import {Gadget} from "igadget.ts"
+import {Club} from "iclub.ts"
 
 
 export interface Member{
-    member_name:string,
-    member_id:number,
-    club_id:number,
-    member_gender:boolean,
-    gadgets:Gadget[]
+    id:number,
+    name:string,
+    gender:boolean,
+    club: Club,
  }
