@@ -6,9 +6,25 @@ import { Club } from "../interface/iclub";
 
 @Injectable({providedIn: 'root'})
 export class ClubService{
-    constructor(private http:HttpClient){ }
+   constructor(private http:HttpClient){ }
 
-    public getClubs(): Observable<Club[]>{
-        return this.http.get<Club[]>(`${environment.apiBaseUrl}/clubs`)
-    }
+   public getClubs(): Observable<Club[]>{
+      return this.http.get<Club[]>(`${environment.apiBaseUrl}/clubs`)
+   }
+
+   public getClubById(clubId: number): Observable<Club>{
+      return this.http.get<Club>(`${environment.apiBaseUrl}/clubs/${clubId}`)
+   }
+
+   public deleteClub(clubId: number): Observable<void> {
+      return this.http.delete<void>(`${environment.apiBaseUrl}/deleteclub/${clubId}`)
+   }
+
+   public addClub(club:Club): Observable<Club>{
+      return this.http.post<Club>(`${environment.apiBaseUrl}/addclub`, club)
+   }
+
+   public updateClub(club:Club): Observable<Club>{
+      return this.http.post<Club>(`${environment.apiBaseUrl}/updateclub/${club.id}`, club)
+   }
 }

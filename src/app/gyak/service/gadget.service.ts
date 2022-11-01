@@ -11,4 +11,20 @@ export class GadgetService{
     public getGadgets(): Observable<Gadget[]>{
         return this.http.get<Gadget[]>(`${environment.apiBaseUrl}/gadgets`)
     }
+
+    public getGadgetById(gadgetId: number): Observable<Gadget>{
+      return this.http.get<Gadget>(`${environment.apiBaseUrl}/Gadgets/${gadgetId}`)
+    }
+
+    public deleteGadget(gadgetId: number): Observable<void> {
+        return this.http.delete<void>(`${environment.apiBaseUrl}/deleteGadget/${gadgetId}`)
+    }
+
+    public addGadget(gadget:Gadget): Observable<Gadget>{
+        return this.http.post<Gadget>(`${environment.apiBaseUrl}/addGadget`, gadget)
+    }
+
+    public updateGadget(gadget:Gadget): Observable<Gadget>{
+        return this.http.post<Gadget>(`${environment.apiBaseUrl}/updateGadget/${gadget.id}`, gadget)
+    }
 }
