@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GyakComponent } from './gyak/gyak.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
  
   ],
   providers: [ ],

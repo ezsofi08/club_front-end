@@ -20,7 +20,12 @@
                </div>
             </div>
         </div>
-    </div>        
+        <form #clubPost="ngForm" (ngSubmit)="onSubmit(clubPost.value)">
+            <input type="text" name="name" ngModel placeholder="name"><br>
+            <input type="text" name="numOfMembers" ngModel placeholder="number of members"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>    
 </body>
 </html>
 

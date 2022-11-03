@@ -11,7 +11,7 @@ import { Member } from './interface/imember';
 import { ClubService } from "./service/club.service"
 import { GadgetService } from './service/gadget.service';
 import { MemberService } from './service/member.service';
-import {MatDialogModule} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-gyak',
@@ -21,6 +21,14 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 export class GyakComponent implements OnInit {
 
+  onSubmit(data:any){
+    console.log(data)
+    this.clubService.addClub(data).subscribe(
+      (response) => {
+        console.log(response)  
+      })
+  }
+
   constructor(private clubService: ClubService, private gadgetService: GadgetService, private memberService: MemberService) {  }
 
   club: Club[] = []
@@ -29,7 +37,7 @@ export class GyakComponent implements OnInit {
   clubAdd: Club = {"name" : "valami", "id" : 0, "numOfMembers":  3, "members": []}
 
   ngOnInit(): void {
-    this.addClub();
+   // this.addClub();
     this.getClubs();
     this.getGadgets();
     this.getMembers();
