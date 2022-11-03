@@ -17,14 +17,16 @@ export class ClubService{
    }
 
    public deleteClub(clubId: number): Observable<void> {
-      return this.http.delete<void>(`${environment.apiBaseUrl}/deleteclub/${clubId}`)
+      return this.http.delete<void>(`${environment.apiBaseUrl}/clubs/deleteclub/${clubId}`)
    }
 
-   public addClub(club:Club): Observable<Club>{
-      return this.http.post<Club>(`${environment.apiBaseUrl}/addclub`, club)
+   public addClub(club:Club): Observable<Club>{      
+      console.log("add", club)
+
+      return this.http.post<Club>(`${environment.apiBaseUrl}/clubs/addclub`, club)
    }
 
    public updateClub(club:Club): Observable<Club>{
-      return this.http.post<Club>(`${environment.apiBaseUrl}/updateclub/${club.id}`, club)
+      return this.http.post<Club>(`${environment.apiBaseUrl}/clubs/updateclub/${club.id}`, club)
    }
 }

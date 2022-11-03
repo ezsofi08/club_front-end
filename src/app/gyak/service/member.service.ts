@@ -13,18 +13,18 @@ export class MemberService{
     }
 
     public getMemberById(memberId: number): Observable<Member>{
-        return this.http.get<Member>(`${environment.apiBaseUrl}/Members/${memberId}`)
+        return this.http.get<Member>(`${environment.apiBaseUrl}/members/${memberId}`)
     }
 
     public deleteMember(memberId: number): Observable<void> {
-    return this.http.delete<void>(`${environment.apiBaseUrl}/deleteMember/${memberId}`)
+    return this.http.delete<void>(`${environment.apiBaseUrl}/members/deleteMember/${memberId}`)
     }
 
     public addMember(member:Member): Observable<Member>{
-    return this.http.post<Member>(`${environment.apiBaseUrl}/addMember`, member)
+    return this.http.post<Member>(`${environment.apiBaseUrl}/members/addMember`, member)
     }
 
     public updateMember(member:Member): Observable<Member>{
-    return this.http.post<Member>(`${environment.apiBaseUrl}/updateMember/${member.id}`, member)
+    return this.http.post<Member>(`${environment.apiBaseUrl}/members/updateMember/${member.id}`, member)
     }
 }
